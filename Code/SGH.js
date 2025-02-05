@@ -23,6 +23,6 @@ function loadSteamGameLib()
 {
     alert("test");
     const steamLIB = "https://steamcommunity.com/profiles/"+steamID+"/games/?tab=all";
-    alert(steamLIB);
+    //alert(steamLIB);
     window.open(steamLIB, "_Blank");
 }
