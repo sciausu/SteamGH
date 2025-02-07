@@ -1,0 +1,22 @@
+{
+  "name": "steamgh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sciausu/SteamGH.git"
+  },
+  "author": "Stefan Ciausu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sciausu/SteamGH/issues"
+  },
+  "homepage": "https://github.com/sciausu/SteamGH#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
