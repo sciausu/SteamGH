@@ -1,4 +1,8 @@
 var steamID = null; // null for now
+var express = require("express");
+var cors = require("cors");
+var trust = express();
+trust.use(cors({origin: true, credentials: true}));
 
 function testing()
 {
@@ -21,8 +25,8 @@ function setSteamID()
 
 function loadSteamGameLib()
 {
-    alert("test");
-    const steamLIB = "https://steamcommunity.com/profiles/"+steamID+"/games/?tab=all";
-    //alert(steamLIB);
-    window.open(steamLIB, "_Blank");
+    fetch("games.JSON").then((result)=>{return result.join()}).then((data) => document.getElementById("tes").innerHTML = 
+    (data.users[0].site + " - " + data.users[0].user));
+   
+    
 }
