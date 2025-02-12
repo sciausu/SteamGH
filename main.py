@@ -8,7 +8,7 @@ load_dotenv()
 steamID = os.getenv("STEAM_ID")
 key = os.getenv("STEAM_API_KEY")
 
-print("API key: ", key)
+print("API key: ", key) 
 print("Steam ID: ", steamID)
 
 steam = Steam(key)
