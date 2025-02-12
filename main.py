@@ -6,12 +6,12 @@ load_dotenv()
 
 # modify / create a .env file and add associated values
 steamID = os.getenv("STEAM_ID")
-KEY = os.getenv("STEAM_API_KEY")
+key = os.getenv("STEAM_API_KEY")
 
-print("API key: ", KEY)
+print("API key: ", key)
 print("Steam ID: ", steamID)
 
-steam = Steam(KEY)
+steam = Steam(key)
 
 
 # arguments: steamid
