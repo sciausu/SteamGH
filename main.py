@@ -1,4 +1,4 @@
-import os
+import os, csv
 from steam_web_api import Steam
 from howlongtobeatpy import HowLongToBeat
 
@@ -20,7 +20,8 @@ def gameHourCheck(gameTitle):
 
     if game is not None and len(game) > 0:
         best_element = max(game, key=lambda element: element.similarity)
-        return  tmpSearch+":","Main Story:", best_element.main_story, "Main + Extras:", best_element.main_extra, "Completionist:", best_element.completionist
+        return  [tmpSearch, best_element.main_story, best_element.main_extra, best_element.completionist]
+        #return  [tmpSearch+":","Main Story:", best_element.main_story, "Main + Extras:", best_element.main_extra, "Completionist:", best_element.completionist]
     else:
         return ""
     print("Main Story:", best_element.main_story) # returns float, round for final build
@@ -46,12 +47,17 @@ def main():
     user = steam.users.get_owned_games(steamID)
     #print(user)
     print(user["game_count"]) #prints number of owned games
-    
+    csvInfo = []
+    csvInfo.append(["Title", "Main Story", "Main + Extras", "Completionist"])
     for i in range(0,user["game_count"]):
         gameTitle = user["games"][i]["name"]
         print(gameHourCheck(gameTitle))
+        csvInfo.append(gameHourCheck(gameTitle))
         print(str(i+1)+" / "+str(user["game_count"]))
         #print(user["games"][i]["name"])
+    with open("steamgh.csv", "w", newline='') as newCsvFile:
+        writer = csv.writer(newCsvFile)
+        writer.writerows(csvInfo)
 
 
 if __name__ == "__main__":
