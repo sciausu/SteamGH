@@ -48,13 +48,15 @@ def main():
     #print(user)
     print(user["game_count"]) #prints number of owned games
     csvInfo = []
-    csvInfo.append(["Title", "Main Story", "Main + Extras", "Completionist"])
+    
     for i in range(0,user["game_count"]):
         gameTitle = user["games"][i]["name"]
         print(gameHourCheck(gameTitle))
         csvInfo.append(gameHourCheck(gameTitle))
         print(str(i+1)+" / "+str(user["game_count"]))
         #print(user["games"][i]["name"])
+    csvInfo.sort()#(key=lambda x : x[0])
+    csvInfo.insert(0, ["Title", "Main Story", "Main + Extras", "Completionist"])
     with open("steamgh.csv", "w", newline='') as newCsvFile:
         writer = csv.writer(newCsvFile)
         writer.writerows(csvInfo)
