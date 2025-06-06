@@ -7,7 +7,7 @@ Installation:
 
      a. To get your steam api key, you have to go here (https://steamcommunity.com/dev) and follow the steps under "Obtaining an Steam Web API Key". Make sure you are logged into steam on your browser
      
-     b. To get your steam profile number, simply open your profile in a new table and you will see "https://steamcommunity.com/profiles/##################/", the numbers where the # is your profile number
+     b. To get your steam profile number, simply open your profile in a new tab and you will see "https://steamcommunity.com/profiles/##################/", the numbers where the # is your profile number
      
   4. Run the .exe and a .csv file will appear where you can then open and modify it using a spreadsheet software of your choosing
 
