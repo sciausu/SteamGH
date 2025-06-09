@@ -20,4 +20,4 @@ Installation:
   8. Run the main.py file and a .csv file will appear in your project folder. You can now modify this .csv file using a spreadsheet software of your choosing
 
 Some notes:
-- When running the program it seems to take 0.6s-0.8s per howlongtobeat api search for each game length. I tried to reduce it using threading but nothing changed :(
+- When running the program it seems to take 0.6s-0.8s per howlongtobeat api search to get the length of each game. I tried to reduce it using threading but nothing changed :(
