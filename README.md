@@ -4,7 +4,7 @@ Installation:
  [download and run through an IDE]
   1. Make sure python is installed on your machine. To check if it is, open the terminal and type "python --version" and if you are given a version number then you have python already installed
   2. Download pip on your machine as the imports require a pip install
-  3. Dependencies
+  3. Dependencies (Copy + Paste in your terminal to download)
      
      a. pip install python-steam-api
      
