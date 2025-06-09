@@ -59,8 +59,7 @@ def main():
     spl6 = []
     spl7 = []
     spl8 = []
-    spl9 = []
-    spl10 = []
+
     inc = 0
     for i in range(0,user["game_count"]):
         if inc % 8 == 0:
